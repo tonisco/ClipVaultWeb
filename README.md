@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClipVault Website - Setup Guide
 
-## Getting Started
+## Quick Start
 
-First, run the development server:
+The website is running! Just need a few asset replacements:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+cd clip-vault-web
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Required Actions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Replace Logo (Remove Background)
 
-## Learn More
+**Current Issue**: The generated logo at `/public/logo.png` may have a white/colored background.
 
-To learn more about Next.js, take a look at the following resources:
+**Solution**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Use an image editor or online tool (remove.bg, photopea.com) to remove the background
+2. Export as PNG with transparency
+3. Replace `/public/logo.png`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Alternative**: Create a new logo:
 
-## Deploy on Vercel
+- Size: 512x512px minimum
+- Format: PNG with transparent background
+- Should include vault/lock icon + play button theme
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Download Official Store Badges
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Google Play Badge**:
+
+1. Visit: https://play.google.com/intl/en_us/badges/
+2. Click "Get badge" or use direct link: https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png
+3. Save as `/public/play-store.png`
+
+**Apple App Store Badge**:
+
+1. Visit: https://developer.apple.com/app-store/marketing/guidelines/#downloadOnAppstore
+2. Download "Download on the App Store" badge
+3. Save as `/public/app-store.png`
+
+**Important**: Use the official badges to comply with brand guidelines!
+
+### 3. (Optional) Add Real App Screenshots
+
+The "See It In Action" section currently shows stylized mockup cards. To add real screenshots:
+
+1. **Take Screenshots**: Capture your actual app screens (downloads, library, player)
+2. **Optional Frame**: Use mockup generators like:
+   - mockuphone.com
+   - smartmockups.com
+   - shots.so
+3. **Save Images**: Place in `/public` folder (e.g., `screenshot-downloads.png`)
+4. **Update Code**: Edit `src/app/page.tsx` around lines 200-318
+
+## Build for Production
+
+When ready to deploy:
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Deploy to Vercel
+
+1. Push code to GitHub
+2. Import project at vercel.com
+3. Configure:
+   - Framework: Next.js
+   - Build Command: `pnpm build`
+   - Install Command: `pnpm install`
+4. Deploy!
+
+## File Structure
+
+```
+clip-vault-web/
+├── public/
+│   ├── logo.png (REPLACE THIS)
+│   ├── play-store.png (REPLACE THIS)
+│   ├── app-store.png (REPLACE THIS)
+│   └── app-mockup.png
+├── src/
+│   ├── app/
+│   │   ├── page.tsx (Homepage)
+│   │   ├── privacy/page.tsx
+│   │   ├── terms/page.tsx
+│   │   └── layout.tsx
+│   └── components/
+│       ├── Navbar.tsx
+│       ├── FAQ.tsx
+│       ├── FeatureCard.tsx
+│       └── Button.tsx
+└── [config files]
+```
+
+## Features Implemented
+
+✅ Responsive navbar with theme toggle  
+✅ Hero section with gradients  
+✅ How It Works (3 steps)  
+✅ App showcase mockups  
+✅ Features grid (9 cards)  
+✅ Stats section  
+✅ FAQ (7 questions)  
+✅ CTA/Download section  
+✅ Footer with legal links  
+✅ Privacy Policy page  
+✅ Terms of Service page  
+✅ Dark/Light mode  
+✅ SEO optimized
+
+## Next Steps
+
+1. Replace logo with transparent version
+2. Download and add official store badges
+3. (Optional) Add real app screenshots
+4. Add actual store URLs when apps are published
+5. Deploy to production
+
+That's it! 🎉
