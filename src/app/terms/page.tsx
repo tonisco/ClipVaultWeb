@@ -150,6 +150,57 @@ export default function TermsPage() {
               legal@clipvault.app
             </p>
           </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+              Governing Law
+            </h2>
+            <p className="mt-4">
+              These Terms shall be governed by and construed in accordance with
+              the laws of your jurisdiction, without regard to its conflict of
+              law provisions. You agree that any legal action or proceeding
+              between you and ClipVault shall be brought exclusively in the
+              courts of competent jurisdiction.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+              Severability
+            </h2>
+            <p className="mt-4">
+              If any provision of these Terms is found to be unenforceable or
+              invalid, that provision will be limited or eliminated to the
+              minimum extent necessary so that the Terms will otherwise remain
+              in full force and effect.
+            </p>
+          </section>
+
+          <section className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-3">
+              Related Policies
+            </h3>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/disclaimer"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                Disclaimer
+              </a>
+              <a
+                href="/dmca"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                DMCA & Copyright
+              </a>
+              <a
+                href="/privacy"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </section>
         </div>
 
         <div className="mt-12">

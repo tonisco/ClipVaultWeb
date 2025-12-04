@@ -112,6 +112,83 @@ export default function PrivacyPage() {
               contact us at privacy@clipvault.app
             </p>
           </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+              Your Data Rights
+            </h2>
+            <p className="mt-4">
+              Since we do not collect or store any personal data, there is no
+              data to access, modify, or delete. All your downloads and settings
+              remain on your device and are under your complete control.
+            </p>
+            <p className="mt-4">You can delete all app data at any time by:</p>
+            <ul className="mt-4 list-disc list-inside space-y-2">
+              <li>Uninstalling the app (removes all app data)</li>
+              <li>
+                Using your device&apos;s settings to clear app data and cache
+              </li>
+              <li>
+                Manually deleting downloaded files from your device storage
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+              App Store Compliance
+            </h2>
+            <p className="mt-4">
+              ClipVault complies with Google Play Store and Apple App Store
+              privacy requirements:
+            </p>
+            <ul className="mt-4 list-disc list-inside space-y-2">
+              <li>
+                We do not collect personally identifiable information (PII)
+              </li>
+              <li>We do not share data with third parties</li>
+              <li>We do not use analytics or advertising SDKs</li>
+              <li>All processing happens locally on your device</li>
+              <li>We maintain transparency about permissions and data usage</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+              International Users
+            </h2>
+            <p className="mt-4">
+              ClipVault can be used globally. Since we do not collect or
+              transfer any personal data, GDPR, CCPA, and other privacy
+              regulations regarding data processing do not apply to our service.
+            </p>
+          </section>
+
+          <section className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-3">
+              Related Policies
+            </h3>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/terms"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                Terms of Service
+              </a>
+              <a
+                href="/disclaimer"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                Disclaimer
+              </a>
+              <a
+                href="/dmca"
+                className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              >
+                DMCA & Copyright
+              </a>
+            </div>
+          </section>
         </div>
 
         <div className="mt-12">

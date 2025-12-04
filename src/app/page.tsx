@@ -17,7 +17,6 @@ import {
   Sparkles,
   Play,
   Download,
-  CheckCircle,
 } from "lucide-react"
 import { Navbar } from "@/components/Navbar"
 
@@ -494,35 +493,62 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-zinc-200 bg-white py-12 dark:border-zinc-800 dark:bg-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-            <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="ClipVault" width={24} height={24} />
-              <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                ClipVault
-              </span>
+          <div className="flex flex-col items-center gap-6">
+            {/* Responsible Usage Notice */}
+            <div className="max-w-3xl text-center">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                <strong className="text-zinc-700 dark:text-zinc-300">
+                  For personal use only.
+                </strong>{" "}
+                Users are responsible for complying with platform terms of
+                service and copyright laws. Only download content you have the
+                right to download.
+              </p>
             </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              © {new Date().getFullYear()} ClipVault. All rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <Link
-                href="/privacy"
-                className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
-              >
-                Terms
-              </Link>
-              <a
-                href="#"
-                className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
-              >
-                Contact
-              </a>
+
+            {/* Main Footer Content */}
+            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row w-full">
+              <div className="flex items-center gap-2">
+                <Image src="/logo.png" alt="ClipVault" width={24} height={24} />
+                <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  ClipVault
+                </span>
+              </div>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                © {new Date().getFullYear()} ClipVault. All rights reserved.
+              </p>
+              <div className="flex gap-6">
+                <Link
+                  href="/disclaimer"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+                >
+                  Disclaimer
+                </Link>
+                <Link
+                  href="/dmca"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+                >
+                  DMCA
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+                >
+                  Privacy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+                >
+                  Terms
+                </Link>
+                <a
+                  href="#"
+                  className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+                >
+                  Contact
+                </a>
+              </div>
             </div>
           </div>
         </div>
